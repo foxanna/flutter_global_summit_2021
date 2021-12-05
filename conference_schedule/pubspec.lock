@@ -265,6 +265,11 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  flutter_localizations:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -347,6 +352,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
+  i69n:
+    dependency: "direct main"
+    description:
+      name: i69n
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   injectable:
     dependency: "direct main"
     description:
