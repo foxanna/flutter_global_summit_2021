@@ -1,0 +1,20 @@
+conferenceVocabulary:
+  juniorTrack: 'Junior Track'
+  seniorTrack: 'Senior Track'
+  breakTime: 'Pause'
+  qaSession: 'Session Q&A'
+  panelDiscussion: 'Panel de discussion'
+
+buttons:
+  addToCalendar: 'Ajouter au calendrier'
+  retry: 'Réessayer'
+
+tooltips:
+  search: 'Chercher'
+  close: 'Fermer'
+  openSocialProfile(String name): 'Ouvrir le profil de $name'
+
+errors:
+  genericError: "Oh là là! Quelque chose s'est mal passé."
+
+likesCount(int count): "$count ${_plural(count, zero: 'likes', one: 'like', many: 'likes')}"
