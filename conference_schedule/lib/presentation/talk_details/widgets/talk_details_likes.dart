@@ -1,3 +1,4 @@
+import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:conference_schedule/presentation/talk_details/bloc/talk_details_bloc.dart';
@@ -25,7 +26,7 @@ class TalkDetailsLikes extends StatelessWidget {
               .add(const TalkDetailsEvent.like()),
         ),
         const SizedBox(width: 8.0),
-        Text('$likes likes'),
+        Text(AppLocalizations.of(context).likesCount(likes)),
       ],
     );
   }
