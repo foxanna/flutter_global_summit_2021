@@ -1,12 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:conference_schedule/domain/models/speaker.dart';
-import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/presentation/talk_details/bloc/talk_details_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:dartx/dartx.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:conference_schedule/utils/build_context_extension.dart';
 
 class TalkDetailsSpeakers extends StatelessWidget {
   const TalkDetailsSpeakers({
@@ -85,8 +85,7 @@ class TalkDetailsSpeakers extends StatelessWidget {
                   if (speaker.linkedin.isNotNullOrEmpty)
                     IconButton(
                       visualDensity: VisualDensity.compact,
-                      tooltip: AppLocalizations.of(context)
-                          .tooltips
+                      tooltip: context.translations.tooltips
                           .openSocialProfile('LinkedIn'),
                       icon: const FaIcon(FontAwesomeIcons.linkedin),
                       onPressed: () => context.read<TalkDetailsBloc>().add(
@@ -95,8 +94,7 @@ class TalkDetailsSpeakers extends StatelessWidget {
                   if (speaker.twitter.isNotNullOrEmpty)
                     IconButton(
                       visualDensity: VisualDensity.compact,
-                      tooltip: AppLocalizations.of(context)
-                          .tooltips
+                      tooltip: context.translations.tooltips
                           .openSocialProfile('Twitter'),
                       icon: const FaIcon(FontAwesomeIcons.twitterSquare),
                       onPressed: () => context.read<TalkDetailsBloc>().add(
@@ -105,8 +103,7 @@ class TalkDetailsSpeakers extends StatelessWidget {
                   if (speaker.github.isNotNullOrEmpty)
                     IconButton(
                       visualDensity: VisualDensity.compact,
-                      tooltip: AppLocalizations.of(context)
-                          .tooltips
+                      tooltip: context.translations.tooltips
                           .openSocialProfile('GitHub'),
                       icon: const FaIcon(FontAwesomeIcons.githubSquare),
                       onPressed: () => context.read<TalkDetailsBloc>().add(

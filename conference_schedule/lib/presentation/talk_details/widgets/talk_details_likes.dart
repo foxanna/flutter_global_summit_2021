@@ -1,8 +1,8 @@
-import 'package:conference_schedule/localization/app_localizations.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:conference_schedule/presentation/talk_details/bloc/talk_details_bloc.dart';
+import 'package:conference_schedule/utils/build_context_extension.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TalkDetailsLikes extends StatelessWidget {
   const TalkDetailsLikes({
@@ -26,7 +26,7 @@ class TalkDetailsLikes extends StatelessWidget {
               .add(const TalkDetailsEvent.like()),
         ),
         const SizedBox(width: 8.0),
-        Text(AppLocalizations.of(context).likesCount(likes)),
+        Text(context.translations.likesCount(likes)),
       ],
     );
   }
