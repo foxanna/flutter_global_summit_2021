@@ -3,9 +3,10 @@ import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/presentation/schedule_list/bloc/schedule_list_bloc.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/conference_title_text_text.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/schedule_list_view.dart';
+import 'package:conference_schedule/utils/build_context_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 
 class LoadedScheduleList extends StatelessWidget {
   const LoadedScheduleList({
@@ -29,7 +30,7 @@ class LoadedScheduleList extends StatelessWidget {
   }
 
   AppBar _buildAppBar(BuildContext context) {
-    final dateFormat = DateFormat.yMEd();
+    final dateFormat = DateFormat.yMEd(context.languageCode);
     final tabTextStyle = Theme.of(context).textTheme.subtitle2;
 
     return AppBar(
