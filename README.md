@@ -8,4 +8,6 @@ It shows how Flutter applications can be localized with [i69n](https://pub.dev/p
 
 ### Flutter Global Summit Vol.2
 
-This repository complements the "Yet another localization approach in Flutter" talk by Anna Leushchenko at the Flutter Global Summit Vol.2 conference 2021. Slides are included.
+This repository complements the ["Yet another localization approach in Flutter"](https://youtu.be/DTGp84cEnr4) talk by [Anna Leushchenko](https://github.com/foxanna) at the [Flutter Global Summit 21 Vol.2 conference ](https://geekle.us/schedule/flutter2). Slides are included.
+
+![Cover](https://raw.githubusercontent.com/foxanna/flutter_global_summit_2021/main/assets/cover.png)
