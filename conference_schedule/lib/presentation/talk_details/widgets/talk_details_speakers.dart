@@ -3,7 +3,6 @@ import 'package:conference_schedule/domain/models/speaker.dart';
 import 'package:conference_schedule/presentation/talk_details/bloc/talk_details_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:dartx/dartx.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:conference_schedule/utils/build_context_extension.dart';
