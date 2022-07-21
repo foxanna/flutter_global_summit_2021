@@ -1,4 +1,3 @@
-import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/utils/build_context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -25,7 +24,7 @@ class TalkDetailsTime extends StatelessWidget {
         const Spacer(),
         OutlinedButton(
           onPressed: null,
-          child: Text(AppLocalizations.of(context).buttons.addToCalendar),
+          child: Text(context.translations.buttons.addToCalendar),
         ),
       ],
     );
