@@ -1,4 +1,5 @@
 import 'package:conference_schedule/di/di_container.dart';
+import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/navigation/router.dart';
 import 'package:conference_schedule/theme/dark_theme.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,10 @@ class ConferenceScheduleApp extends StatelessWidget {
       routerDelegate: diContainer<ConferenceScheduleAppRouter>().delegate(),
       routeInformationParser:
           diContainer<ConferenceScheduleAppRouter>().defaultRouteParser(),
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+      ],
     );
   }
 }
