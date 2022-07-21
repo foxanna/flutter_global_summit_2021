@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:conference_schedule/domain/models/speaker.dart';
+import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/presentation/talk_details/bloc/talk_details_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:dartx/dartx.dart';
@@ -83,7 +84,9 @@ class TalkDetailsSpeakers extends StatelessWidget {
                   if (speaker.linkedin.isNotNullOrEmpty)
                     IconButton(
                       visualDensity: VisualDensity.compact,
-                      tooltip: 'Open LinkedIn profile',
+                      tooltip: AppLocalizations.of(context)
+                          .tooltips
+                          .openSocialProfile('LinkedIn'),
                       icon: const FaIcon(FontAwesomeIcons.linkedin),
                       onPressed: () => context.read<TalkDetailsBloc>().add(
                           TalkDetailsEvent.openLink(link: speaker.linkedin!)),
@@ -91,7 +94,9 @@ class TalkDetailsSpeakers extends StatelessWidget {
                   if (speaker.twitter.isNotNullOrEmpty)
                     IconButton(
                       visualDensity: VisualDensity.compact,
-                      tooltip: 'Open Twitter profile',
+                      tooltip: AppLocalizations.of(context)
+                          .tooltips
+                          .openSocialProfile('Twitter'),
                       icon: const FaIcon(FontAwesomeIcons.squareTwitter),
                       onPressed: () => context.read<TalkDetailsBloc>().add(
                           TalkDetailsEvent.openLink(link: speaker.twitter!)),
@@ -99,7 +104,9 @@ class TalkDetailsSpeakers extends StatelessWidget {
                   if (speaker.github.isNotNullOrEmpty)
                     IconButton(
                       visualDensity: VisualDensity.compact,
-                      tooltip: 'Open GitHub profile',
+                      tooltip: AppLocalizations.of(context)
+                          .tooltips
+                          .openSocialProfile('GitHub'),
                       icon: const FaIcon(FontAwesomeIcons.squareGithub),
                       onPressed: () => context.read<TalkDetailsBloc>().add(
                           TalkDetailsEvent.openLink(link: speaker.github!)),
