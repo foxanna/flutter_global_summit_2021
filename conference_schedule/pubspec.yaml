@@ -13,10 +13,13 @@ dependencies:
   dartx: 1.1.0
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_bloc: 8.1.1
   freezed_annotation: 2.1.0
   font_awesome_flutter: 10.2.1
   get_it: 7.2.0
+  i69n: 2.1.0
   injectable: 1.5.3
   intl: 0.17.0
   json_annotation: 4.6.0
