@@ -1,0 +1,20 @@
+conferenceVocabulary:
+  juniorTrack: 'Джуніор трек'
+  seniorTrack: 'Сіньор трек'
+  breakTime: 'Перерва'
+  qaSession: 'Питання і відповіді'
+  panelDiscussion: 'Панельна дискусія'
+
+buttons:
+  addToCalendar: 'Додати до календаря'
+  retry: 'Спробувати ще раз'
+
+tooltips:
+  search: 'Пошук'
+  close: 'Закрити'
+  openSocialProfile(String name): 'Відкрити $name профіль'
+
+errors:
+  genericError: 'Отакої! Щось пішло не за планом.'
+
+likesCount(int count): "$count ${_plural(count, zero: 'вподобайок', one: 'вподобайка', few: 'вподобайки', many: 'вподобайок')}"
