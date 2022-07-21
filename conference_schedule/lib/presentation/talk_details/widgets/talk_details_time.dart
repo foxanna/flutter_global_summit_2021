@@ -1,4 +1,5 @@
 import 'package:conference_schedule/localization/app_localizations.dart';
+import 'package:conference_schedule/utils/build_context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -14,7 +15,7 @@ class TalkDetailsTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dateFormat = DateFormat.jm();
+    final dateFormat = DateFormat.jm(context.languageCode);
 
     return Row(
       children: [
