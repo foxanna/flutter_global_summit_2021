@@ -44,7 +44,3 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-
-# Ignore generated localization files for the purpose of the talk.
-# In general, commit them as all generated files.
-**/*.i69n.dart
