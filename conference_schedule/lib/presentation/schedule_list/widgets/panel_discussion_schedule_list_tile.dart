@@ -1,7 +1,7 @@
 import 'package:conference_schedule/domain/models/schedule_item.dart';
-import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/schedule_list_tile_speakers.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/schedule_list_tile_time.dart';
+import 'package:conference_schedule/utils/build_context_extension.dart';
 import 'package:flutter/material.dart';
 
 class PanelDiscussionScheduleListTile extends StatelessWidget {
@@ -33,9 +33,7 @@ class PanelDiscussionScheduleListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    AppLocalizations.of(context)
-                        .conferenceVocabulary
-                        .panelDiscussion,
+                    context.translations.conferenceVocabulary.panelDiscussion,
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   ScheduleListTileSpeakers(

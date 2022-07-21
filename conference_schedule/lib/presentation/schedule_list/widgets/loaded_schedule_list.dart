@@ -1,5 +1,4 @@
 import 'package:conference_schedule/domain/models/schedule.dart';
-import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/presentation/schedule_list/bloc/schedule_list_bloc.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/conference_title_text_text.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/schedule_list_view.dart';
@@ -50,14 +49,14 @@ class LoadedScheduleList extends StatelessWidget {
         inSearchMode
             ? IconButton(
                 icon: const Icon(Icons.close),
-                tooltip: AppLocalizations.of(context).tooltips.close,
+                tooltip: context.translations.tooltips.close,
                 onPressed: () => context
                     .read<ScheduleListBloc>()
                     .add(const ScheduleListEvent.cancelSearch()),
               )
             : IconButton(
                 icon: const Icon(Icons.search),
-                tooltip: AppLocalizations.of(context).tooltips.search,
+                tooltip: context.translations.tooltips.search,
                 onPressed: () => context
                     .read<ScheduleListBloc>()
                     .add(const ScheduleListEvent.search()),
@@ -67,7 +66,7 @@ class LoadedScheduleList extends StatelessWidget {
         tabs: [
           Tab(
             child: Text(
-              '${AppLocalizations.of(context).conferenceVocabulary.juniorTrack}\n'
+              '${context.translations.conferenceVocabulary.juniorTrack}\n'
               '${dateFormat.format(schedule.juniorTrack.date)}',
               textAlign: TextAlign.center,
               style: tabTextStyle,
@@ -75,7 +74,7 @@ class LoadedScheduleList extends StatelessWidget {
           ),
           Tab(
             child: Text(
-              '${AppLocalizations.of(context).conferenceVocabulary.seniorTrack}\n'
+              '${context.translations.conferenceVocabulary.seniorTrack}\n'
               '${dateFormat.format(schedule.seniorTrack.date)}',
               textAlign: TextAlign.center,
               style: tabTextStyle,

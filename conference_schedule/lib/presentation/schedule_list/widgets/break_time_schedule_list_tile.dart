@@ -1,6 +1,6 @@
 import 'package:conference_schedule/domain/models/schedule_item.dart';
-import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/schedule_list_tile_time.dart';
+import 'package:conference_schedule/utils/build_context_extension.dart';
 import 'package:flutter/material.dart';
 
 class BreakTimeScheduleListTile extends StatelessWidget {
@@ -30,7 +30,7 @@ class BreakTimeScheduleListTile extends StatelessWidget {
               ),
               const SizedBox(width: 8.0),
               Text(
-                AppLocalizations.of(context).conferenceVocabulary.breakTime,
+                context.translations.conferenceVocabulary.breakTime,
                 style: Theme.of(context)
                     .textTheme
                     .headline5

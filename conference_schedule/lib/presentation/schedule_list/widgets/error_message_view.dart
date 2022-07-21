@@ -1,4 +1,4 @@
-import 'package:conference_schedule/localization/app_localizations.dart';
+import 'package:conference_schedule/utils/build_context_extension.dart';
 import 'package:flutter/material.dart';
 
 class ErrorMessageView extends StatelessWidget {
@@ -16,7 +16,7 @@ class ErrorMessageView extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(AppLocalizations.of(context).errors.genericError),
+        Text(context.translations.errors.genericError),
         if (onRetry != null) ...[
           const SizedBox(height: 8.0),
           IconButton(
@@ -24,7 +24,7 @@ class ErrorMessageView extends StatelessWidget {
             iconSize: 36.0,
             onPressed: onRetry,
           ),
-          Text(AppLocalizations.of(context).buttons.retry),
+          Text(context.translations.buttons.retry),
         ]
       ],
     );
