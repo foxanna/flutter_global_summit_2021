@@ -1,4 +1,5 @@
 import 'package:conference_schedule/domain/models/schedule_item.dart';
+import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/schedule_list_tile_speakers.dart';
 import 'package:conference_schedule/presentation/schedule_list/widgets/schedule_list_tile_time.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class QASessionScheduleListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    'Q&A Session',
+                    AppLocalizations.of(context).conferenceVocabulary.qaSession,
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   ScheduleListTileSpeakers(

@@ -19,6 +19,10 @@ class AppLocalizations {
 
   static final List<Locale> supportedLocales =
       _translations.keys.map((x) => Locale(x)).toList();
+
+  static Translations of(BuildContext context) =>
+      Localizations.of<AppLocalizations>(context, AppLocalizations)!
+          .translations;
 }
 
 class _AppLocalizationsDelegate

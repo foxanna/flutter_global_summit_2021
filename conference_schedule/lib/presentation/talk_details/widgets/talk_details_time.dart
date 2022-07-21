@@ -1,3 +1,4 @@
+import 'package:conference_schedule/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -21,9 +22,9 @@ class TalkDetailsTime extends StatelessWidget {
         const Text(' - '),
         Text(dateFormat.format(end.toLocal())),
         const Spacer(),
-        const OutlinedButton(
+        OutlinedButton(
           onPressed: null,
-          child: Text('Add to calendar'),
+          child: Text(AppLocalizations.of(context).buttons.addToCalendar),
         ),
       ],
     );
